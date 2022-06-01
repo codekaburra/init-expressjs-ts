@@ -11,7 +11,13 @@ app.get("/bye", (req, res) => {
   res.send("Bye!");
 });
 
+app.get("/user", function (req, res) {
+  res.status(200).json({ name: "john" });
+});
+
 // start the Express server
 app.listen(port, () => {
   console.log(`server started at http://localhost:${port}`);
 });
+
+export = app;
